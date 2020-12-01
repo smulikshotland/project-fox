@@ -31,6 +31,8 @@ import { CartComponent } from './comps/cart/cart.component';
 import { ShippingComponent } from './comps/shipping/shipping.component';
 import { VerticalToolbarComponent } from './comps/vertical-toolbar/vertical-toolbar.component';
 import { AdminComponent } from './comps/admin/admin.component';
+import { DetailsPinsComponent } from './comps/details-pins/details-pins.component';
+import { DetailsMovieComponent } from './comps/details-movie/details-movie.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { AdminComponent } from './comps/admin/admin.component';
     ShippingComponent,
     VerticalToolbarComponent,
     AdminComponent,
+    DetailsPinsComponent,
+    DetailsMovieComponent,
     
     // HttpClientModule
     

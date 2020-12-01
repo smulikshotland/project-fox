@@ -9,39 +9,44 @@ import { products } from 'src/model/prouct';
 })
 export class CartComponent implements OnInit {
   items
-   sum=0 ;
-   
+  sum = 0;
+
   constructor(private cartService: CartService) {
-    
+
   }
-  
+
   ngOnInit(): void {
-    
+
     // this.items = this.cartService.getItems();
     this.getShoppingCard()
+    console.log("mmmmm",this.getShoppingCard());
+    
 
-    this.cartService.itemsSub$.subscribe( data => {
-      this.items = data})
-      this.getPrice()
+    this.cartService.itemsSub$.subscribe(data => {
+      this.items = data
+    })
+
+   
 
   }
-  
-  getPrice(){
-    this.items.forEach(i =>this.sum +=i.price);
-    
+
+  getPrice() {
+    this.items.forEach(i => this.sum += parseFloat( i.price));
+
     return this.sum
   }
 
-  getShoppingCard(){
-    const user =JSON.parse(localStorage.getItem('currentUser'))
+  getShoppingCard() {
+    const user = JSON.parse(localStorage.getItem('currentUser'))
 
 
-this.cartService.getShoppingCard(user.id).subscribe(data=>{
-  this.items = data  
-})
+    this.cartService.getShoppingCard(user.id).subscribe(data => {
+      this.items = data
+      this.getPrice()
+    })
 
   }
-  deliteItem(id){
+  deliteItem(id) {
 
     this.cartService.deliteShoppingCard(id)
   }

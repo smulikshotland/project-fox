@@ -23,6 +23,7 @@ import { RecommendationsComponent } from './comps/recommendations/recommendation
 import { CartComponent } from './comps/cart/cart.component';
 import { ShippingComponent } from './comps/shipping/shipping.component';
 import { AdminComponent } from './comps/admin/admin.component';
+import { DetailsPinsComponent } from './comps/details-pins/details-pins.component';
 
 
 
@@ -49,7 +50,8 @@ children:[
   { path: 'RainCover', component: RainCoverComponent },
   { path: 'cart', component: CartComponent },
   { path: 'shipping', component: ShippingComponent },
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin', component: AdminComponent },
+  { path: 'detailsPins', component: DetailsPinsComponent }
 
 ]}
 ];

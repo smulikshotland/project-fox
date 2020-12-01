@@ -15,7 +15,7 @@ export class shoppingCart extends BaseEntity {
     date:string;
 
     @Column()
-    sizeOfTheHat:string;
+    sizeOfTheHat?:string;
 
     @Column()
     email:string;
@@ -27,7 +27,7 @@ export class shoppingCart extends BaseEntity {
     image:String;
 
     @Column()
-    widthOfTheHat:string;
+    widthOfTheHat?:string;
 
     @ManyToOne( () => Users)
     usersId: Users

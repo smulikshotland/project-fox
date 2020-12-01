@@ -9,7 +9,7 @@
         <div *ngIf="pinss" class="row">
           <div *ngFor="let pins of pinss" class="col-md-4" id="">
             <div class="card mb-4 shadow-sm">
-              <img [routerLink]="['/detail']" [queryParams]="{id:pins.id}"
+              <img [routerLink]="['/detailsPins']" [queryParams]="{id:pins.id}"
               class="hatImage" src={{pins.image}} alt="Photo of a Shiba Inu">
         
               <div class="card-body">
