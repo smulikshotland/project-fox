@@ -1,0 +1,31 @@
+.text-center{
+    text-align: center;
+  border: 3px solid white;
+     /* padding: 50%; 
+    font-size: large; */
+    margin-right: 500px;
+    
+
+
+}
+#inputEmail{
+    height: 50px;
+    width: 250px;
+    
+}
+
+#inputPassword{
+    height: 50px;
+    width: 250px;
+}
+h2{
+    color: honeydew;
+    text-align: center;
+}
+p{
+    color: blue;
+    /* border-bottom: blue; */
+}
+label{
+    color: honeydew;
+}

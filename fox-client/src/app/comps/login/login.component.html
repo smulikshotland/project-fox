@@ -1,0 +1,26 @@
+<div class="text-center">
+    <form class="form-signin" #form  [formGroup]="signInForm" >
+      <h2 class="h3 mb-3 font-weight-normal">אנא היכנס</h2>
+      <br><br>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      
+      
+      <input type="email" id="inputEmail" formControlName="email" class="form-control" placeholder="כתובת אימייל" required autofocus>
+      <br>
+      <input type="password" formControlName="password" id="inputPassword" class="form-control" placeholder="סיסמה" required>
+      <div class="checkbox mb-3">
+        <br><br>
+        <label>
+          <input type="checkbox" value="remember-me"> זכור אותי
+        </label>
+      </div>
+      <br><br>
+      <button [disabled]="signInForm.invalid" (click)="onSubmit()" type="submit" >אישור</button>
+      <br>
+      <br>
+      <button routerLink='/registration'>משתמש חדש</button>
+      
+      
+  </form>
+  </div>
+  <router-outlet></router-outlet>

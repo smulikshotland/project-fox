@@ -1,0 +1,35 @@
+<div class="text-center">
+  
+    <hr>
+    
+      <form class="form-signin" #form (ngSubmit)="onSubmit()" [formGroup]="signInForm" >
+        <!-- <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+        <h2 class="h3 mb-3 font-weight-normal">אנא היכנס</h2>
+        <br><br>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        
+        <input type="email" id="inputEmail" formControlName="email" class="form-control" placeholder="שם פרטי" required autofocus>
+        <br>
+        <input type="email" id="inputEmail" formControlName="email" class="form-control" placeholder="שם משפחה" required autofocus>
+        <br>
+        <input type="email" id="inputEmail" formControlName="email" class="form-control" placeholder="כתובת" required autofocus>
+        <br>
+        <input type="email" id="inputEmail" formControlName="email" class="form-control" placeholder=" אימייל" required autofocus>
+        <br>
+        <!-- <label for="inputPassword" class="sr-only">Password</label> -->
+        <input type="password" formControlName="password" id="inputPassword" class="form-control" placeholder="צור סיסמה" required>
+        <div class="checkbox mb-3">
+          <br><br>
+          <label>
+            <input type="checkbox" value="remember-me"> זכור אותי
+          </label>
+        </div>
+        <br><br>
+        <button [disabled]="signInForm.invalid" type="submit" routerLink='/cart'>אישור</button>        <!-- <button routerLink='/chat'>Sign in</button> -->
+        <br>
+        
+        
+        
+    </form>
+    </div>
+    <router-outlet></router-outlet>

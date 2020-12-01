@@ -1,0 +1,100 @@
+/* example-spacer {
+    flex: 1 1 auto;
+  } */
+  span{
+      margin: 10px;
+      
+      
+  }
+  h1{
+      text-align: center;
+      color: aliceblue;
+  }
+  .allOptions{
+  cursor: pointer;
+  flex: 3;
+}
+img{
+  /* width: 100px; */
+  height: 100px;
+}
+
+  
+  /* Style the search field */
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  tr{
+    /* float: left;
+    width: 20%; */
+    
+    /* background: #2196F3; */
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  td{
+    padding: 20px;
+  }
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+    
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  ul{
+    width: 150px;
+    margin-left: 50px;
+    
+  }
+  
+  .wrapper {
+    display: flex;
+    
+    
+    
+}
+
+.topBar{
+  display: flex;
+}
+
+.toolbarOpt{
+  background-color: unset;
+  color: white;
+  cursor: pointer;
+}
+
+.allOptions2{
+  flex:3
+  
+
+  
+  
+}
+  

@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+
+</head>
+
+<body dir="rtl">
+
+  <br>
+  <div class="topBar">
+    <mat-toolbar class="allOptions toolbarOpt">
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <form class="example" action="action_page.php">
+
+        <!-- <button type="submit"><i class="fa fa-search"></i></button>
+  <input type="text" placeholder="חיפוש" name="search"> -->
+      </form>
+      <span routerLink='/login'>החשבון שלי</span>
+      <span routerLink='/registration'>הרשמה</span>
+      
+     
+  
+    </mat-toolbar>
+    <mat-toolbar class="allOptions2  toolbarOpt">
+      <span routerLink='/about'>אודות החנות</span>
+      <span routerLink='/contact'>יצירת קשר</span>
+      <span routerLink='/Recommendations'>המלצות</span>
+      <span routerLink='/sale'>מבצעים</span>
+      <span routerLink='/branches'>סניפים</span>
+      <span routerLink='/cart'> סל קניות
+        <i class="material-icons">shopping_cart</i>
+      </span>
+      <span *ngIf="userRole == 'admin'" routerLink='/admin'>כניסת מנהל</span>
+      <span> 
+        <!-- <a routerLink='/'> -->
+          <a routerLink=''>
+          <img src="../../../assets/images/logo .png" alt="Italian Trulli"></a>
+      </span>
+
+
+    </mat-toolbar>
+  </div>
+  <img src="../../../assets/images/sentence.png" id="imgSlogan">
+
+  <div class="wrapper">
+
+    <div>
+      <ul>
+        <li><a routerLink='/Hats' class="active" href="#home">כובעים</a></li>
+        <br>
+        <li><a routerLink='/Movie' href="#news">סרטים</a></li>
+        <br>
+        <li><a routerLink='/Pins' href="#contact">סיכות</a></li>
+        <br>
+        <li><a routerLink='/RainCover' href="#about">כיסוי לגשם</a></li>
+        <br>
+        <li><a routerLink='/BoxForHat' href="#about">קופסה לכובע</a></li>
+        <br>
+        <li><a routerLink='/Brushes' href="#about">מברשות</a></li>
+      </ul>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+
+
+</body>
+
+</html>
+

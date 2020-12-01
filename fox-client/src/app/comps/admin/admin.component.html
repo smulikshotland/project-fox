@@ -1,0 +1,79 @@
+<html dir="rtl" lang="ar">
+    <form class="form-signin" #form (ngSubmit)="onSubmit()" [formGroup]="signInForm" >
+    <div class="center">
+      <div class="titel">
+    <h2>טבלת המוצרים</h2>
+    <br>
+    <p>עדכן הוסף או מחק מוצרים </p>
+    <br>  
+</div>         
+<div>
+  <table class="center">
+    <thead>
+      <tr>
+        <th scope="col">שם המוצר</th>
+        <th scope="col">מחיר</th>
+        <th scope="col">תמונה</th>
+        <th scope="col">קטגוריה</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+            <input type="name" id="inputName" formControlName="name" class="form-control" placeholder="המוצר" required autofocus>
+        </th>
+        <td>
+            <input type="price" id="inputPrice" formControlName="price" class="form-control" placeholder="מחיר" required autofocus>
+        </td>
+        <td>
+            <input type="imageEdit" id="inputImage" formControlName="image" class="form-control" placeholder="תמונה" required autofocus>
+
+        </td>
+        <td>
+            <input type="category" id="inputCategory" formControlName="category" class="form-control" placeholder="קטגוריית המוצר" required autofocus>
+
+        </td>
+        
+      </tr> 
+    </tbody>
+  </table>
+  <button type="submit">אישור</button>
+</div>
+</div>
+<br><br>
+<h5>עריכת מוצרים</h5>
+<table class="center">
+  <thead>
+    <tr>
+      <th scope="col">שם המוצר</th>
+      <th scope="col">מחיר</th>
+      <th scope="col">תמונה</th>
+      <th scope="col">קטגוריה</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+          <input type="nameEdit" id="inputName" formControlName="nameEdit" class="form-control" placeholder="המוצר" required autofocus>
+      </th>
+      <td>
+          <input type="priceEdit" id="inputPrice" formControlName="priceEdit" class="form-control" placeholder="מחיר" required autofocus>
+      </td>
+      <td>
+          <input type="imageEdit" id="inputImage" formControlName="imageEdit" class="form-control" placeholder="תמונה" required autofocus>
+
+      </td>
+      <td>
+          <input type="categoryEdit" id="inputCategory" formControlName="categoryEdit" class="form-control" placeholder="קטגוריית המוצר" required autofocus>
+
+      </td>
+      
+    </tr> 
+  </tbody>
+</table>
+<button type="submit">אישור</button>
+
+</form>
+</html>
+
+
