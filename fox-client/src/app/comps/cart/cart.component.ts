@@ -10,6 +10,8 @@ import { products } from 'src/model/prouct';
 export class CartComponent implements OnInit {
   items
   sum = 0;
+  b=0
+  c=0
 
   constructor(private cartService: CartService) {
 
@@ -19,7 +21,6 @@ export class CartComponent implements OnInit {
 
     // this.items = this.cartService.getItems();
     this.getShoppingCard()
-    console.log("mmmmm",this.getShoppingCard());
     
 
     this.cartService.itemsSub$.subscribe(data => {
@@ -35,6 +36,17 @@ export class CartComponent implements OnInit {
 
     return this.sum
   }
+  getPrice1(){
+    this.c= this.sum-this.b
+     return this.c
+  }
+
+  getTax(a){
+ this.b=a*0.17
+ 
+ return this.b
+  }
+  
 
   getShoppingCard() {
     const user = JSON.parse(localStorage.getItem('currentUser'))
@@ -43,6 +55,8 @@ export class CartComponent implements OnInit {
     this.cartService.getShoppingCard(user.id).subscribe(data => {
       this.items = data
       this.getPrice()
+      this.getTax(this.sum)
+      this.getPrice1()
     })
 
   }
