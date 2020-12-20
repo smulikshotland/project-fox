@@ -22,5 +22,6 @@ export class BestsellerComponent implements OnInit {
   
   }
   
+  
 
 }

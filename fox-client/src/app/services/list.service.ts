@@ -41,6 +41,7 @@ export class ListService {
   }
 
   arrSize=[
+    {size:0},
     {size:50},
     {size:51},
     {size:52},
@@ -54,6 +55,7 @@ export class ListService {
     {size:60},
 ]
 arrWidth=[
+  {width:0},
   {width:7.5},
   {width:8},
   {width:8.5},

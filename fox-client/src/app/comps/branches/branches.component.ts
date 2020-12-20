@@ -11,5 +11,5 @@ export class BranchesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

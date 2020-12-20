@@ -2,7 +2,7 @@
 .container{
     /* margin: 10px; */
     margin-right: 500px;
-    margin-top: 110px;
+    margin-top: 50px;
     width: 750px;
     height: 400px;
 }
@@ -12,3 +12,4 @@ img{
     height: 150px;
     cursor: pointer;
 }
+

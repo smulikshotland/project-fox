@@ -9,7 +9,7 @@
         <div *ngIf="movie" class="row">
           <div *ngFor="let mov of movie" class="col-md-4" id="">
             <div class="card mb-4 shadow-sm">
-              <img [routerLink]="['/detail']" [queryParams]="{id:mov.id}"
+              <img [routerLink]="['/detailsMovie']" [queryParams]="{id:mov.id}"
               class="hatImage" src={{mov.image}} alt="Photo of a Shiba Inu">
         
               <div class="card-body">

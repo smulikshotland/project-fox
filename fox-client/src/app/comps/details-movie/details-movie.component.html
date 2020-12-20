@@ -1,1 +1,19 @@
-<p>details-movie works!</p>
+
+  <div *ngIf="product" class="card" style="width: 18rem;">
+
+    <h2>{{product.name}}</h2>
+    <img class="card-img-top" [src]="product.image" alt="Card image cap">
+    <div><span>מחיר: </span>{{product.price}}</div>
+    <form class="form-signin" #form (ngSubmit)="onSubmit()" [formGroup]="signInForm" >
+
+    
+    <button>הוסף לסל</button>
+      <br>
+      <br>
+      <a routerLink='/shipping'>מחיר משלוח</a>
+    <br>
+    <button (click)="goBack()">חזרה</button>
+  
+    
+</form>
+  </div>

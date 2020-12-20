@@ -13,7 +13,7 @@ import { ShopingCartProduct } from '../details/details.component';
 export class DetailsPinsComponent implements OnInit {
 
   productToSendToServer: ShopingCartProduct
-  product1: any
+  product: any
   
   signInForm: FormGroup;
 
@@ -38,7 +38,7 @@ export class DetailsPinsComponent implements OnInit {
   }
 
   onSubmit() {
-    this.addToCart(this.product1)
+    this.addToCart(this.product)
   }
 
 
@@ -48,7 +48,7 @@ export class DetailsPinsComponent implements OnInit {
 
       if (Array.isArray(data)) {
         let result = data.filter(word => word.id == Id);
-        this.product1 = result[0];
+        this.product = result[0];
 
       }
     });
@@ -71,13 +71,14 @@ export class DetailsPinsComponent implements OnInit {
        email:user.email,
        price:product.price,
        image:product.image,
-      sizeOfTheHat: null,
-      widthOfTheHat: null,
+      sizeOfTheHat: 0,
+      widthOfTheHat:0,
       usersId: user.id,
       productsId:  parseInt( product.id)
       
 
     }).subscribe(data => {
+      console.log(data)
       
 
     })

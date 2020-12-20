@@ -10,8 +10,9 @@
         <h3>בחר מידה:
           <select formControlName="sizeOfTheHat" name="size" id="size">
             <option *ngFor="let size of arrSize" value="50">{{size.size}}</option>
-          </select>     
+          </select> 
          </h3>
+         <!-- <span *ngIf="signInForm.get('model').hasError('required') && signInForm.get('model').touched" class='error' padding>Model is a required field.</span>   -->
       </div>
   <div>
     <h4>

@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { CartService } from 'src/app/services/cart.service';
 import { PersonsListService } from 'src/app/services/persons-list.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-details',
@@ -17,25 +17,29 @@ export class DetailsComponent implements OnInit {
   arrSize:any
   arrWidth:any
   signInForm: FormGroup;
-
+  
   constructor(private route: ActivatedRoute,
     private listService: ListService,
     private _router: Router,
-    private cartService: CartService
+    private cartService: CartService,
+    private fb: FormBuilder
 
   ) {
 
     this.arrSize=this.listService.arrSize
     this.arrWidth=this.listService.arrWidth
   }
+  
 
 
 
   ngOnInit(): void {
-    this.signInForm = new FormGroup({
-      sizeOfTheHat: new FormControl(),
-      widthOfTheHat: new FormControl(),
+    this.signInForm = this.fb.group ({
+      sizeOfTheHat: ['0', [Validators.required]],
+      widthOfTheHat: ['', [Validators.required]],
+      
     })
+    
     this.getHero();
   }
 
@@ -57,7 +61,7 @@ export class DetailsComponent implements OnInit {
   }
 
   goBack(): void {
-    this._router.navigate(['/gallery']);
+    this._router.navigate(['/Hats']);
   }
 
   addToCart(product) {
@@ -73,10 +77,6 @@ export class DetailsComponent implements OnInit {
        email:user.email,
        price:product.price,
        image:product.image,
-       
-       
-      // sizeOfTheHat: this.size.controlers.value
-
       sizeOfTheHat: this.signInForm.controls.sizeOfTheHat.value,
       widthOfTheHat: this.signInForm.controls.widthOfTheHat.value,
       usersId: user.id,

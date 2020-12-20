@@ -10,7 +10,7 @@ export class CartService {
   itemsSub$ = new Subject
 
   items = [];
-  sum: number;
+  totalPriceToDisplay$: Subject<number> = new Subject;
   productToSendToServer: ShopingCartProduct
   constructor(private http: HttpClient) { }
   addToCart(product) {

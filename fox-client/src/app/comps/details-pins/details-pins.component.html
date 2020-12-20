@@ -1,9 +1,9 @@
 
-  <div *ngIf="product1" class="card" style="width: 18rem;">
+  <div *ngIf="product" class="card" style="width: 18rem;">
 
-    <h2>{{product1.name}}</h2>
-    <img class="card-img-top" [src]="product1.image" alt="Card image cap">
-    <div><span>מחיר: </span>{{product1.price}}</div>
+    <h2>{{product.name}}</h2>
+    <img class="card-img-top" [src]="product.image" alt="Card image cap">
+    <div><span>מחיר: </span>{{product.price}}</div>
     <form class="form-signin" #form (ngSubmit)="onSubmit()" [formGroup]="signInForm" >
 
     
