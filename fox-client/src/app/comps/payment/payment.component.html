@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php" class="form-signin" #form (ngSubmit)="onSubmit()" [formGroup]="paymentForm">
+  
+          <div class="row">
+            <div class="col-50">
+              <h3>כתובת לחיוב</h3>
+              <label for="fname"><i class="fa fa-user"></i>שם מלא</label>
+              <input type="name" id="inputName" formControlName="name" class="form-control" placeholder="שם " required autofocus>
+              <label for="email"><i class="fa fa-envelope"></i> אימייל</label>
+              <input type="email" id="inputEmail" formControlName="email" class="form-control" placeholder=" אימייל" required autofocus>
+              <label for="adr"><i class="fa fa-address-card-o"></i> כתובת</label>
+              <input type="addres" id="inputAddres" formControlName="addres" class="form-control" placeholder="כתובת" required autofocus>
+              <label for="city"><i class="fa fa-institution"></i> עיר</label>
+              <input type="city" id="inputCity" formControlName="city" class="form-control" placeholder="עיר" required autofocus>
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">מדינה</label>
+                  <input type="state" id="inputState" formControlName="state" class="form-control" placeholder="מדינה" required autofocus>
+                </div>
+                <div class="col-50">
+                  <label for="zip">מיקוד</label>
+                  <input type="zip" id="inputZip" formControlName="zip" class="form-control" placeholder="מיקוד" required autofocus>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3>תשלום</h3>
+              <label for="fname">כל סוגי הכרטיסים</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">שם בכרטיס</label>
+              <input type="cname" id="inputCname" formControlName="cname" class="form-control" placeholder="שם בכרטיס" required autofocus>
+              <label for="ccnum">מספר כרטיס אשראי</label>
+              <input type="ccnum" id="inputCcnum" formControlName="ccnum" class="form-control" placeholder="מספר כרטיס אשראי" required autofocus>
+              <label for="expmonth">חודש</label>
+              <input type="expmonth" id="inputExpmonth" formControlName="expmonth" class="form-control" placeholder="חודש" required autofocus>
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">שנה</label>
+                  <input type="expyear" id="inputExpyear" formControlName="expyear" class="form-control" placeholder="שנה" required autofocus>
+                </div>
+                <div class="col-50">
+                  <label for="cvv">שלש ספרות</label>
+                  <input type="cvv" id="inputCvv" formControlName="cvv" class="form-control" placeholder="שלש ספרות" required autofocus>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> אני מסכים ומאשר שימוש באשראי ע"פ הנתונים שהכנסתי
+          </label>
+          <button [disabled]="paymentForm.invalid" (click)="onSubmit()" type="submit"> אישור תשלום</button>        <!-- <button routerLink='/chat'>Sign in</button> -->
+        </form>
+      </div>
+    </div>
+  
+    <div class="col-25">
+      <div class="container">
+        <h3>סיכום הזמנה
+          <span class="price" style="color: #ccc;">
+            <i class="fa fa-shopping-cart"></i>
+            <b>4</b>
+          </span>
+        </h3>
+        <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+        <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+        <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+        <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+        <hr>
+        <p>סך הכל <span class="price" style="color: #ccc;"><b>$30</b></span></p>
+      </div>
+    </div>
+  </div>

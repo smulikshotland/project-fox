@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ListService } from 'src/app/services/list.service';
 import { PersonsListService } from 'src/app/services/persons-list.service';
 
@@ -14,7 +15,8 @@ export class AllAplictionComponent implements OnInit {
   
   constructor(
     private listService: ListService,
-    private personsListService:PersonsListService ) {
+    private personsListService:PersonsListService,
+    private _router: Router, ) {
     
    }
 
@@ -26,6 +28,11 @@ export class AllAplictionComponent implements OnInit {
     
 
     
+  }
+  LookingAtTheBasket(){
+    this._router.navigate(['cart'])
+    return alert('אם ברצונך ליראות את הפריטים שהינך מוסיף לעגלה בבקשה הירשם בעמוד הבית')
+
   }
   
   

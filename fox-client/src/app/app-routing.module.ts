@@ -25,6 +25,7 @@ import { ShippingComponent } from './comps/shipping/shipping.component';
 import { AdminComponent } from './comps/admin/admin.component';
 import { DetailsPinsComponent } from './comps/details-pins/details-pins.component';
 import { DetailsMovieComponent } from './comps/details-movie/details-movie.component';
+import { PaymentComponent } from './comps/payment/payment.component';
 
 
 
@@ -45,7 +46,6 @@ children:[
   { path: 'Brushes', component: BrushesComponent },
   { path: 'Hats', component: HatsComponent},
   {path:'gallery',component:GalleryComponent},
-  // {path:':product',component:HatsComponent},
   {path:'Recommendations',component:RecommendationsComponent},
   { path: 'Movie', component: MovieComponent },
   { path: 'Pins', component: PinsComponent },
@@ -54,8 +54,10 @@ children:[
   { path: 'shipping', component: ShippingComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'detailsPins', component: DetailsPinsComponent },
-  { path: 'detailsMovie', component: DetailsMovieComponent }
+  { path: 'detailsMovie', component: DetailsMovieComponent },
+  { path: 'payment', component: PaymentComponent }
 
+  
 ]}
 ];
 

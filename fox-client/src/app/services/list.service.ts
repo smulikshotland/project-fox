@@ -1,6 +1,8 @@
 import { Injectable, Pipe } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../src/environments/environment'
+
 export interface products {
   "id": string | number,
   "name": string,
@@ -26,13 +28,13 @@ export class ListService {
   }
 
   getListHats() {
-    return this._http.get('http://localhost:3000/products/hats');
+    return this._http.get(`${environment.herokuUrl}/products/hats`);
   }
   getListPins() {
-    return this._http.get('http://localhost:3000/products/pins');
+    return this._http.get(`${environment.herokuUrl}/products/pins`);
   }
   getListMovie() {
-    return this._http.get('http://localhost:3000/products/movie');
+    return this._http.get(`${environment.herokuUrl}/products/movie`);
   }
 
   httpGet(url: string): Observable<any> {

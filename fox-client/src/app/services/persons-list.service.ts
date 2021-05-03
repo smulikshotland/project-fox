@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { Person } from 'src/model/person';
-
+import { environment } from '../../../src/environments/environment'
 
 export interface persons{
   "id": string|number,
@@ -35,7 +35,7 @@ export class PersonsListService {
   
   
    createUserToDB({name,lastName,addres,email,password}){
-        return this._http.post('http://localhost:3000/users/post', {name,lastName,addres,email,password});
+        return this._http.post(`${environment.herokuUrl}/users/post`, {name,lastName,addres,email,password});
         
         
        }
@@ -48,28 +48,11 @@ export class PersonsListService {
      
 
       validateUser(email,password):Observable<any>{
-        return this._http.post('http://localhost:3000/auth/login', {email,password});
+        return this._http.post(`${environment.herokuUrl}/auth/login`, {email,password});
       }
 }
 
 
-// currentUser$: BehaviorSubject<> = new BehaviorSubject(JSON.parse(localStorage.getItem('currentUser')));
-
-
-//   setUser(user: Users) {
-//     this.currentUser$.next(user)
-//     localStorage.setItem('currentUser', JSON.stringify(user));
-
-//   }
-//   signOut() {
-//     this.currentUser$.next(null)
-//     localStorage.removeItem('currentUser');
-  
-//   }
-
-//   getCurrentUser(): Observable<Users> {
-//     return this.currentUser$.asObservable()
-//   }
 
 
 

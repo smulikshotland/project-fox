@@ -33,6 +33,7 @@ import { VerticalToolbarComponent } from './comps/vertical-toolbar/vertical-tool
 import { AdminComponent } from './comps/admin/admin.component';
 import { DetailsPinsComponent } from './comps/details-pins/details-pins.component';
 import { DetailsMovieComponent } from './comps/details-movie/details-movie.component';
+import { PaymentComponent } from './comps/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { DetailsMovieComponent } from './comps/details-movie/details-movie.compo
     AdminComponent,
     DetailsPinsComponent,
     DetailsMovieComponent,
+    PaymentComponent,
     
     // HttpClientModule
     

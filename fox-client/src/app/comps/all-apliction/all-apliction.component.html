@@ -31,7 +31,7 @@
       <span routerLink='/Recommendations'>המלצות</span>
       <span routerLink='/sale'>מבצעים</span>
       <span routerLink='/branches'>סניפים</span>
-      <span routerLink='/cart'> סל קניות
+      <span (click)="LookingAtTheBasket()"> סל קניות
         <i class="material-icons">shopping_cart</i>
       </span>
       <span *ngIf="userRole == 'admin'" routerLink='/admin'>כניסת מנהל</span>
@@ -63,10 +63,13 @@
         <li><a routerLink='/Brushes' href="#about">מברשות</a></li>
       </ul>
     </div>
+    
     <div>
       <router-outlet></router-outlet>
     </div>
   </div>
+
+  
   
 
 

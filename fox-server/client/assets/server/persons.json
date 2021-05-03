@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "שמואל",
+      "email":"shmolik1990@gmail.com",
+      "password":"123456"
+    },
+    {
+        "id": 1,
+        "name": "אהרן",
+        "email":"shmolik1990@gmail.com",
+        "password":"1234"
+      },
+      {
+        "id": 1,
+        "name": "משה",
+        "email":"shmolik1990@gmail.com",
+        "password":"1234"
+      }
+  ]

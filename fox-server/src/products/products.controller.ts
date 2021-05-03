@@ -15,7 +15,6 @@ export class ProductsController {
   // @UseGuards(RolesGuard)
   async create(@Body() createProductDto: CreateProductDto) {
     console.log("post1")
-    // console.log('DTO controler',createProductDto);
     
     return await this.ProductsService.create(createProductDto);
   }

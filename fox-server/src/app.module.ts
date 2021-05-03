@@ -13,17 +13,26 @@ import { ShoppingCartController } from './shopping-cart/shopping-cart.controller
 import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
 import { shoppingCart } from './shopping-cart/entities/ShoppingCart.entity';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
-  imports: [ 
+  imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '../','../', 'client'),
+    }),
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: "postgres://yejkkbtv:1S75IWChktziTb2Q6gmMTsXx2Dp05V6W@kandula.db.elephantsql.com:5432/yejkkbtv",
       autoLoadEntities: true,
       synchronize: true,
-    }),UsersModule, ProductsModule, ShoppingCartModule
-     ],     
-  controllers: [AppController, ],
-  providers: [AppService, ],
+    }), UsersModule, ProductsModule, ShoppingCartModule
+  ],
+  controllers: [AppController,],
+  providers: [AppService,],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+
+  }
+}

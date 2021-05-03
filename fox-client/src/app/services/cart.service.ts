@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { ShopingCartProduct } from '../comps/details/details.component';
+import { environment } from '../../../src/environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -41,19 +42,19 @@ export class CartService {
   addProductShippingCart({ name, date, sizeOfTheHat, widthOfTheHat, usersId, productsId ,email,price,image}) {
     console.log('user id' , usersId);
     
-    return this.http.post('http://localhost:3000/shopping-cart/post', { name, date, sizeOfTheHat, widthOfTheHat, usersId, productsId ,email,price,image});
+    return this.http.post(`${environment.herokuUrl}/shopping-cart/post`, { name, date, sizeOfTheHat, widthOfTheHat, usersId, productsId ,email,price,image});
   }
 
   getShoppingCard(id) {
     
-    return this.http.get(`http://localhost:3000/shopping-cart/${id}`);
+    return this.http.get(`${environment.herokuUrl}/shopping-cart/${id}`);
   }
 
   
 
   deliteShoppingCard(id){
     
-    return this.http.delete(`http://localhost:3000/shopping-cart/${id}`).subscribe(data =>{
+    return this.http.delete(`${environment.herokuUrl}/shopping-cart/${id}`).subscribe(data =>{
       console.log('bug after delited!!!', data);
       this.itemsSub$.next(data)
       

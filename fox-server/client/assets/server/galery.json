@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "בורסלינו",
+      "size": [50,51,52,53,54,55,56,57,58,58,60,61,62],
+      "price": 700,
+      "image":"https://adm.kikar.co.il/data/auto/addonsmgr/ld/ulxdooxf.jpg"
+    },
+    {
+      "id":2,
+      "name": "ברליינדו",
+      "size": [50,51,52,53,54,55,56,57,58,58,60,61,62],
+      "price": 600,
+      "image":"https://adm.kikar.co.il/data/auto/addonsmgr/ld/ulxdooxf.jpg"
+    },
+    {
+      "id": 3,
+      "name": "ראטצ",
+      "size": [50,51,52,53,54,55,56,57,58,58,60,61,62],
+      "price": 500,
+      "image":"https://adm.kikar.co.il/data/auto/addonsmgr/ld/ulxdooxf.jpg"
+    },
+    {
+      "id": 4,
+      "name": "דוריה",
+      "size": [50,51,52,53,54,55,56,57,58,58,60,61,62],
+      "price": 400,
+      "image":"https://adm.kikar.co.il/data/auto/addonsmgr/ld/ulxdooxf.jpg"
+    },
+    {
+      "id": 5,
+      "name": "לאונרדו",
+      "size": [50,51,52,53,54,55,56,57,58,58,60,61,62],
+      "price": 300,
+      "image":"https://adm.kikar.co.il/data/auto/addonsmgr/ld/ulxdooxf.jpg"
+    }
+  ]
+  

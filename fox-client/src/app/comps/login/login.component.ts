@@ -31,12 +31,10 @@ export class LoginComponent implements OnInit {
       await this.signInForm.controls.password.value).subscribe((data: any) => {
         localStorage.setItem('currentUser', JSON.stringify(data));
 
-        console.log("data after login", data);
         this.personsListService.userId = data.id
         this.personsListService.userRole$.next(data.role)
 
         if (!data) {
-          console.log("plplplpl");
 
           alert('אינך קיים במערכת')
           return false
@@ -47,8 +45,6 @@ export class LoginComponent implements OnInit {
         return alert('ברוך הבא')
 
       })
-    // console.log(!y);
-
   }
 
 }

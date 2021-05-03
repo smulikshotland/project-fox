@@ -22,12 +22,9 @@ export class AdminComponent implements OnInit {
   }
 
   onSubmit() {
-    // console.log(12121212);
     console.log("press");
     
-    // if (this.signInForm.valid) {
       this.addProductByAdmin()
-    // }
   }
 
   addProductByAdmin() {

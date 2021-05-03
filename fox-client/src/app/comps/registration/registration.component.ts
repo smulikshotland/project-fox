@@ -16,7 +16,7 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.signInForm = new FormGroup({
-      name: new FormControl(null, [Validators.minLength(2) ,Validators.required,Validators.maxLength(20)]),
+      name: new FormControl(null, [Validators.required]),
       lastName: new FormControl(null, [Validators.required]),
       addres: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.email,Validators.required]),
@@ -26,6 +26,8 @@ export class RegistrationComponent implements OnInit {
   onSubmit(){
     if(this.signInForm.valid){
       this.addUserToDB()
+      return alert(' נרשמת בהצלחה')
+
     }
     
   }
